@@ -51,15 +51,21 @@ curl -X GET "https://api.cloudflare.com/client/v4/zones/{ZONE_ID}/dns_records" \
 
 ### 4. Configure Your TP-Link Router
 
-1. Log in to your TP-Link router admin panel
-2. Navigate to the DDNS settings
-3. Select "Custom" or "No-IP" as the service provider
-4. Configure:
-   - **Service Provider:** Custom/No-IP
-   - **Domain Name:** Your hostname (e.g., `home.example.com`)
-   - **Username:** The username you set in environment variables
-   - **Password:** The password you set in environment variables
-   - **Server Address:** Your worker URL (e.g., `your-worker.workers.dev`)
+1. Log in to your TP-Link router
+2. Go to **Services > Dynamic DNS > Custom DDNS**
+3. Update the **"Update URL"**:
+   - Use this URL: `http://[USERNAME]:[PASSWORD]@your-worker.workers.dev?hostname=[DOMAIN]`
+   - Replace `your-worker.workers.dev` with your actual worker URL
+   - Don't replace `[USERNAME]`, `[PASSWORD]`, or `[DOMAIN]` - these are placeholders that will be automatically replaced by the router
+   - Click Save
+4. Add a new Custom DDNS entry for each WAN interface:
+   - **Interface:** Select the WAN interface you want to run this on
+   - **Account Name:** The username you set in your Cloudflare Worker environment variables
+   - **Password:** The password you set in your Cloudflare Worker environment variables
+   - **Domain Name:** The hostname you are updating DNS for (must match one of the configured hostnames)
+   - **Interval Mode:** Custom
+   - **Update Interval:** e.g., 5 (minutes)
+   - Click OK
 
 ## Usage
 
