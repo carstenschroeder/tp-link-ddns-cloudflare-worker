@@ -106,7 +106,7 @@ Authorization: Basic {base64(username:password)}
 
 For more information and discussion about this solution, see the original Reddit thread: [Figured out how to get Dynamic DNS on TP-Link Omada routers](https://www.reddit.com/r/TPLink_Omada/comments/1hbzrlg/figured_out_how_to_get_dynamic_dns_on_tplink/)
 
-Thanks to [u/MrPrezident0](https://www.reddit.com/user/MrPrezident0/) for sharing his solution!
+Thanks to [u/MrPrezident0](https://www.reddit.com/user/MrPrezident0/) for sharing this solution!
 
 ## License
 
