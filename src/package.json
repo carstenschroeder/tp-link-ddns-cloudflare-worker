@@ -1,5 +1,5 @@
 {
-  "name": "ddns-worker",
+  "name": "tp-link-ddns-cloudflare-worker",
   "private": true,
   "devDependencies": {
     "wrangler": "^3.0.0"
